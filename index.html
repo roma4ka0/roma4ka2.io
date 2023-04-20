@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="stile.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+<div class="header">
+<ul>
+<li>
+<img class="logo" src="img\img\icon\Logo.png" alt="logo">
+</li>
+</ul>
+<div>
+<div class="search">
+<input type="text" placeholder="Search">
+<img src="img\img\lupa.svg">
+</div>
+<ul class="menu">
+<li>Home</li>
+<li>Company Profile</li>
+<li>Products</li>
+<li>Services</li>
+<li>R & D</li>
+<li>Contact</li>
+</ul>
+</div>
+</div>
+<img class="Baner" src="img\img\Logoo.png">
+<div class="pipols probelu" id="app" >
+<div  v-if="products" v-for="p in products">
+<a  :href="'index.html#' +p.id"> 
+<img class="circle" :src="'./img/img/Pipols/' +p.image">
+<h3>{{p.title}}</h3>
+<p>{{p.text}}</p></a>
+</div>
+</div> 
+<div class="container">
+<div class="footer">
+<ul>
+<li>PROFILE</li>
+<li>MANAGEMENT</li>
+<li>PRODUCTS</li>
+<li>R&D</li>
+<li>LINKS</li>
+<li>SITEMAP</li>
+<li>CONTACT</li>
+</ul>
+</div>
+<div class="social">
+<img src="img\img\FooterNav\Ico_in.svg">
+<img src="img\img\FooterNav\Ico_inst.svg">
+<img src="img\img\FooterNav\Ico_tube.svg">
+<img src="img\img\FooterNav\Ico_tw.svg">
+<img src="img\img\FooterNav\Ico_fb.svg">
+</div>
+</div>
+<div class="final">
+<p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
+</div>
+</body>
+</html>
